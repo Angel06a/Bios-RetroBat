@@ -1,0 +1,128 @@
+[{
+    "desc":"Infinite Time",
+    "space":{
+      "maincpup":{
+        "type":"program",
+        "tag":":maincpu"
+      }
+    },
+    "script":{
+      "run":" maincpup:writev_u16(0x802f29a2,0x0725) "
+    }
+  },{
+    "comment":"Disable Infinite Time before activating this cheat",
+    "script":{
+      "on":" maincpup:writev_u16(0x802f29a2,0x0000) "
+    },
+    "space":{
+      "maincpup":{
+        "type":"program",
+        "tag":":maincpu"
+      }
+    },
+    "desc":"Finish this Round Now!"
+  },{
+    "desc":"Hit Anywhere (Both Players)",
+    "space":{
+      "maincpup":{
+        "type":"program",
+        "tag":":maincpu"
+      }
+    },
+    "script":{
+      "off":" maincpup:writev_u16(0x8017cb04,0x1040)  maincpup:writev_u16(0x8017cdb0,0x4501) ",
+      "run":" maincpup:writev_u16(0x8017cb04,0x1000)  maincpup:writev_u16(0x8017cdb0,0x2400) "
+    }
+  },{
+    "desc":""
+  },{
+    "desc":"P1 Infinite Energy",
+    "space":{
+      "maincpup":{
+        "type":"program",
+        "tag":":maincpu"
+      }
+    },
+    "script":{
+      "run":" maincpup:writev_u32(0x802116e0,0x00010000) "
+    }
+  },{
+    "desc":"P1 Drain All Energy Now!",
+    "space":{
+      "maincpup":{
+        "type":"program",
+        "tag":":maincpu"
+      }
+    },
+    "script":{
+      "on":" maincpup:writev_u32(0x802116e0,0x00000000) "
+    }
+  },{
+    "desc":"P1 Always have Maximum Rage",
+    "space":{
+      "maincpup":{
+        "type":"program",
+        "tag":":maincpu"
+      }
+    },
+    "script":{
+      "run":" maincpup:writev_u32(0x802116e8,0x00010000) "
+    }
+  },{
+    "desc":"P1 Drain All Rage Now!",
+    "space":{
+      "maincpup":{
+        "type":"program",
+        "tag":":maincpu"
+      }
+    },
+    "script":{
+      "on":" maincpup:writev_u32(0x802116e8,0x00000000) "
+    }
+  },{
+    "desc":""
+  },{
+    "desc":"P2 Infinite Energy",
+    "space":{
+      "maincpup":{
+        "type":"program",
+        "tag":":maincpu"
+      }
+    },
+    "script":{
+      "run":" maincpup:writev_u32(0x8021174c,0x00010000) "
+    }
+  },{
+    "desc":"P2 Drain All Energy Now!",
+    "space":{
+      "maincpup":{
+        "type":"program",
+        "tag":":maincpu"
+      }
+    },
+    "script":{
+      "on":" maincpup:writev_u32(0x8021174c,0x00000000) "
+    }
+  },{
+    "desc":"P2 Always have Maximum Rage",
+    "space":{
+      "maincpup":{
+        "type":"program",
+        "tag":":maincpu"
+      }
+    },
+    "script":{
+      "run":" maincpup:writev_u32(0x80211754,0x00010000) "
+    }
+  },{
+    "desc":"P2 Drain All Rage Now!",
+    "space":{
+      "maincpup":{
+        "type":"program",
+        "tag":":maincpu"
+      }
+    },
+    "script":{
+      "on":" maincpup:writev_u32(0x80211754,0x00000000) "
+    }
+  }]
